@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Crete+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <nav class="nav">
+            <ul id="nav-bar">
+                <li class="nav-item"><a class="scrollable-link" href="#about-me">About</a></li>
+                <li class="nav-item"> <a class="scrollable-link" id="portfolio-page" href="#portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item"><a class="scrollable-link" href="#contact-me">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- Main-info Section -->
+
+    <div class="main-info main-content-window bot-right" id="about-me">
+
+        <h2>About Me</h2>
+        <img id="bio-photo" src="assets/image/web_developer.gif" alt="cute
+                cat
+                saying Hi" height="250" width="350">
+        <p>“Writing about yourself seems to be a lot like sticking a branch
+            into clear river-water and rolling up the
+            muddy bottom.” <a class="p-links" href="https://www.goodreads.com/author/quotes/3389.Stephen_King"
+                target="_blank">@Stephen_King</a></p>
+        <p>"Many people, meeting Aziraphale for the first
+            time, formed three impressions: that he was
+            English, that he was intelligent, and that he was gayer than a
+            treeful of monkeys on nitrous oxide." <a class="p-links"
+                href="https://www.goodreads.com/author/quotes/1654.Terry_Pratchett" target="_blank">@Terry Pratchett</a>
+        </p>
+        <p>"I have never listened to anyone who criticized my taste in space
+            travel, sideshows or gorillas. When this
+            occurs, I pack up my dinosaurs and leave the room."<a class="p-links"
+                href="https://www.goodreads.com/author/quotes/1630.Ray_Bradbury" target="_blank">@Ray Bradbury</a></p>
+        <p>"It is good to be a cynic — it is better to be a contented cat —
+            and it is best not to exist at all."
+            "I know always that I am an outsider; a stranger in this century
+            and among those who are still men." <a class="p-links"
+                href="https://www.goodreads.com/author/quotes/9494.H_P_Lovecraft" target="_blank">@H.P.
+                Lovecraft</a>
+        </p>
+    </div>
+
+    <!-- Portfolio Section -->
+    <div class="portfolio-box main-content-window bot-left" id="portfolio">
+        <div class="article-links">
+            <h2>Portfolio</h2>
+            <a class="scrollable-link" href="#nav-bar"><i class="fa fa-angle-up"></i></a>
+        </div>
+        <div class="flex-box">
+            <div class="pictures-box">
+                <div class="text-box">
+                    <img class="portfolio-pic" src="assets/image/s712_skills_gov.uk_.jpg" alt="cute
+                            gray-white cat" height="250" width="300">
+                    <div class="text">New technology</div>
+                </div>
+                <div class="text-box">
+                    <img class="portfolio-pic" src="assets/image/istockphoto-1013952186-1024x1024.jpg" alt="love box"
+                        height="250" width="300">
+                    <div class="text">New technology</div>
+                </div>
+                <div class="text-box">
+                    <img class="portfolio-pic"
+                        src="assets/image/Reasons-Why-You-Should-Consider-Mobile-Developer-than-Web-Developer.jpg"
+                        alt="Coffee cups" height="250" width="300">
+                    <div class="text">Web development</div>
+                </div>
+                <div class="text-box">
+                    <img class="portfolio-pic" src="assets/image/what-is-a-web-developer.jpg" alt="another cut
+                            calico cat" height="250" width="300">
+                    <div class="text">Web development</div>
+                </div>
+                <div class="text-box">
+                    <img class="portfolio-pic" src="assets/image/Android-App-Development-1.png"
+                        alt="men hits mountance on a bike" height="250" width="300">
+                    <div class="text">App Development</div>
+                </div>
+                <div class="text-box">
+                    <img class="portfolio-pic" src="assets/image/banner-desarrollo-aplicaciones_33099-1720.jpg"
+                        alt="random tex pic" height="250" width="300">
+                    <div class="text">App Development</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+
+    <div class="contact-box main-content-window bot-right" id="contact-me">
+        <div class="article-links">
+            <h2>Contact</h2>
+            <a class="scrollable-link" href="#nav-bar"><i class="fa fa-angle-up"></i></a>
+        </div>
+        <form action="/action_page.php">
+            <div class="input-effect-wrapper">
+                <label for="fname">Name:</label>
+                <input class="underline-effect" type="text" id="name" name="name" placeholder="Your name.."><br>
+                <span class="focus-border"></span>
+            </div>
+            <div class="input-effect-wrapper">
+                <label for="fname">Email:</label>
+                <input class="underline-effect" type="text" id="email" name="email" placeholder="Your email.."><br>
+                <span class="focus-border"></span>
+            </div>
+            <div class="input-effect-wrapper">
+                <label for="fname">Message:</label>
+                <textarea class="underline-effect" id="message-window" name="message" placeholder=""></textarea><br>
+                <span class="focus-border"></span>
+            </div>
+            <input type="submit" id="submit-button" value="Submit">
+        </form>
+
+    </div>
+
+
+    <!-- Footer Section-->
+
+    <footer>Copyright &copy;</footer>
+
+    <!-- JS/Jquery Section-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $('.scrollable-link').on('click', function () {
+            let anchor = $(this);
+            $('html, body').stop().animate({
+                scrollTop: $(anchor.attr('href')).offset().top
+            }, 400);
+            event.preventDefault();
+        });
+    </script>
+</body>
+
+</html>
