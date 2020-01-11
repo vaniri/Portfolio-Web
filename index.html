@@ -6,6 +6,8 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
 
 </head>
 
@@ -23,18 +25,19 @@
                 <li class="nav-item"><a class="scrollable-link" href="#about-me">About</a></li>
                 <li class="nav-item"> <a class="scrollable-link" id="portfolio-page" href="#portfolio">Portfolio</a>
                 </li>
-                <li class="nav-item"><a class="scrollable-link" href="#contact-me">Contact</a></li>
+                <li class="nav-item"><a class="scrollable-link" href="#tools-container">Tools</a></li>
             </ul>
         </div>
 
-
         <!-- Main-info Section -->
         <div class="main-info main-content-window bot-right" id="about-me">
+
             <div id="photo-container">
-                <img id="bio-photo" src="assets/image/1523644960_loading2.gif" alt="dumb foto of me"
-                    height="150" width="150">
-                <h5> Hi! I'm Irina!</h4>
-                <h5> Full Stack Web Developer</h4>
+
+                <img id="bio-photo" src="assets/image/1523644960_loading2.gif" alt="dumb foto of me" height="150"
+                    width="150">
+                <h4> Hi! I'm Irina!</h4>
+                <h4> Full Stack Web Developer</h4>
             </div>
             <div id="my-info">
                 <p>I started my web development journey a year ago having no idea how the websites even work. I had read
@@ -70,32 +73,148 @@
                 <h2>Portfolio</h2>
                 <a class="scrollable-link" href="#nav-bar"><i class="fa fa-angle-up"></i></a>
             </div>
-            <div class="pictures-box">
-                <div class="text-box input-effect-wrapper">
-                    <img class="portfolio-pic underline-effect" src="assets/image/Enlight29.jpg" alt="RPS Game"
-                        height="180" width="250">
-                    <a class="portfolio-link underline-effect" href="https://github.com/vaniri/RPS-multiplayer">Rock
-                        Paper Scissors</a>
-                    <span class="focus-border"></span>
+            <div id="project-container">
+                <div class="slideshow-container underline-effect">
+                    <div class="mySlides1">
+                        <img class="portfolio-img underline-effect" src="assets/image/RPS/Enlight29.jpg">
+                    </div>
+
+                    <div class="mySlides1">
+                        <img class="portfolio-img" src="assets/image/RPS/1.jpg">
+                    </div>
+
+
+                    <div class="mySlides1">
+                        <img class="portfolio-img" src="">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+                    <div class="portfolio-links-container">
+                        <a class="portfolio-link underline-effect" href="https://github.com/vaniri/RPS-multiplayer">Rock
+                            Paper Scissors</a>
+                        <span class="focus-border"></span>
+                    </div>
                 </div>
-                <div class="text-box input-effect-wrapper">
-                    <img class="portfolio-pic underline-effect" src="assets/image/javascript-ai.jpg"
-                        alt="Star Wars Game" height="180" width="250">
-                    <a class="portfolio-link underline-effect" href="https://github.com/vaniri/TriviaGame">Fun JS
-                        Game</a>
-                    <span class="focus-border"></span>
+
+                <div class="slideshow-container underline-effect">
+                    <div class="mySlides2">
+                        <img class="portfolio-img" src="assets/image/StarWars/startBack.jpg" alt="StarWarsGame">
+                    </div>
+
+                    <div class="mySlides2">
+                        <img class="portfolio-img" src="assets/image/StarWars/1.png" alt="StarWarsGame">
+                    </div>
+
+                    <div class="mySlides2">
+                        <img class="portfolio-img" src="assets/image/StarWars/2.png" alt="StarWarsGame">
+                    </div>
+
+                    <div class="mySlides2">
+                        <img class="portfolio-img" src="assets/image/StarWars/3.png" alt="StarWarsGame">
+                    </div>
+
+                    <div class="mySlides2">
+                        <img class="portfolio-img" src="assets/image/StarWars/4.png" alt="StarWarsGame">
+                    </div>
+
+                    <div class="mySlides2">
+                        <img class="portfolio-img" src="assets/image/StarWars/5.png" alt="StarWarsGame">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+                    <div class="portfolio-lonks-container">
+                        <a class="portfolio-link underline-effect" href="https://github.com/vaniri/unit-4-game">Star
+                            Wars Game</a>
+                        <span class="focus-border"></span>
+                    </div>
                 </div>
-                <div class="text-box input-effect-wrapper">
-                    <img class="portfolio-pic underline-effect" src="assets/image/startBack.jpg" alt="Star Wars Game"
-                        height="180" width="250">
-                    <a class="portfolio-link underline-effect" href="https://github.com/vaniri/unit-4-game">Star Wars
-                        Game</a>
-                    <span class="focus-border"></span>
+                <div class="slideshow-container underline-effect">
+
+                    <div class="mySlides3">
+                        <img class="portfolio-img-second" src="assets/image/wise-crack/1.png" alt="Wise-Crack">
+                    </div>
+
+                    <div class="mySlides3">
+                        <img class="portfolio-img-second" src="assets/image/wise-crack/2.png" alt="Wise-Crack">
+                    </div>
+
+                    <div class="mySlides3">
+                        <img class="portfolio-img-second" src="assets/image/wise-crack/3.jpg" alt="Wise-Crack">
+                    </div>
+
+                    <div class="mySlides3">
+                        <img class="portfolio-img-second" src="assets/image/wise-crack/4.jpg" alt="Wise-Crack">
+                    </div>
+
+                    <div class="mySlides3">
+                        <img class="portfolio-img-second" src="assets/image/wise-crack/5.jpg" alt="Wise-Crack">
+                    </div>
+
+                    <div class="mySlides3">
+                        <img class="portfolio-img-second" src="assets/image/wise-crack/6.jpg" alt="Wise-Crack">
+                    </div>
+
+                    <div class="mySlides3">
+                        <img class="portfolio-img-second" src="assets/image/wise-crack/7.jpg" alt="Wise-Crack">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+                    <div class="portfolio-lonks-container">
+                        <a class="portfolio-link underline-effect"
+                            href="https://github.com/mpgelber7495/wise-crack">Wise-Crack</a>
+                        <span class="focus-border"></span>
+                    </div>
+                </div>
+                <div class="slideshow-container underline-effect">
+                    <div class="mySlides4">
+                        <img class="portfolio-img-second" src="assets/image/Trivia/javascript-ai.jpg" alt="RPS Game">
+                    </div>
+
+                    <div class="mySlides4">
+                        <img class="portfolio-img-second" src="assets/image/Trivia/1.png" alt="TriviaGame">
+                    </div>
+
+                    <div class="mySlides4">
+                        <img class="portfolio-img-second" src="assets/image/Trivia/2.png" alt="TriviaGame">
+                    </div>
+
+                    <div class="mySlides4">
+                        <img class="portfolio-img-second" src="assets/image/Trivia/3.png" alt="TriviaGame">
+                    </div>
+
+                    <div class="mySlides4">
+                        <img class="portfolio-img-second" src="assets/image/Trivia/4.png" alt="TriviaGame">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1, 3)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 3)">&#10095;</a>
+                    <div class="portfolio-lonks-container">
+                        <a class="portfolio-link underline-effect" href="https://github.com/vaniri/TriviaGame">Fun JS
+                            Quiz-Game</a>
+                        <span class="focus-border"></span>
+                    </div>
                 </div>
             </div>
         </div>
 
+        <!-- Tools Section-->
+
+        <div id="tools-container" class="main-content-window bot-right" id="about-me">
+            <div class="article-links">
+                <h2>Tools used</h2>
+                <a class="scrollable-link" href="#nav-bar"><i class="fa fa-angle-up"></i></a>
+            </div>
+            <div id="tools-img-container">
+                <img id="tools-img" src="assets/image/tools4.png">
+                <p></p>
+            </div>
+        </div>
+
         <!-- Footer Section-->
+
         <footer>Copyright &copy;</footer>
 
     </div>
