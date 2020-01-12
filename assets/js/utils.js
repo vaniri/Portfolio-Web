@@ -1,8 +1,13 @@
 //Greating
 
 window.onload = () => {
-  getArray(dayPart(new Date().getHours()));
+  showArray(dayPart(new Date().getHours()));
+  $("#start-screen").append('<hr id="animated"></hr>');
   setTimeout(afterStart, 2000);
+  $("#SWG").append('<iframe class="project-video" width="560" height="315" src="https://www.youtube.com/embed/QMWxJFC5xCo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+  $("#wise-crack").append(' <iframe class="project-video" width="560" height="315" src="https://www.youtube.com/embed/fG0JwZmYhlc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+  $("#JS-quiz").append('<iframe class="project-video" width="560" height="315" src="https://www.youtube.com/embed/bR77LCnj_70" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+  
 };
 
 function dayPart(hours) {
@@ -17,7 +22,7 @@ function dayPart(hours) {
   }
 }
 
-let getArray = dayPart => {
+let showArray = dayPart => {
   showDayPart(dayPart.split(""), 0);
 };
 
@@ -51,3 +56,10 @@ $(".scrollable-link").on("click", function () {
   event.preventDefault();
 });
 
+//animated underline
+$(".nav-item").mouseover(event => {
+let { offsetWidth, offsetLeft } = event.target;
+$(".nav-item:not(:first-child):before").css('content', 'none');
+$("#underbar").css('width', offsetWidth + "px");
+$("#underbar").css('left', offsetLeft + "px");
+});

@@ -36,7 +36,7 @@ hr {
 #animated {
   width: 1%;
   border: 1px solid #ed4d45;
-  -webkit-animation: increase 3s;
+  -webkit-animation: increase 5s;
   -moz-animation: increase 3s;
   -o-animation: increase 3s;
   animation: increase 3s;
@@ -57,11 +57,14 @@ hr {
   margin: auto;
 }
 
+ul {
+  position: relative;
+}
+
 #nav-bar {
   margin: auto;
   padding: 0.5vw 0;
-  display: flex;
-  justify-content: center;
+  width: fit-content;
 }
 
 li {
@@ -89,7 +92,6 @@ li {
 #nav a:hover {
   cursor: pointer;
   color: #ed4d45;
-  text-decoration: underline;
 }
 
 /* nav-bar links separators */
@@ -98,6 +100,43 @@ li {
   border-right: 2px solid #ed4d45;
   content: "";
 }
+
+/* nav bar underline animation */
+#underbar {
+  margin: auto;
+  width: 0;
+  height: 3px;
+  background: rgba(100,100,200,0);
+  top: 33px;
+  position: absolute;
+  -webkit-transition: 0.5s ease;
+  border: none;
+}
+
+.li {
+    -webkit-transition: 0.5s ease;
+}
+
+  li:hover{
+    cursor: pointer;
+  }
+
+  li:nth-of-type(1):hover ~ #underbar{
+    background: rgb(31, 12, 204);
+    box-shadow: 0 0 10px rgb(31, 12, 204);
+  }
+
+  li:nth-of-type(2):hover ~ #underbar{
+    background: rgb(124, 9, 231);
+    box-shadow: 0 0 10px rgb(124, 9, 231);
+  }
+  
+ li:nth-of-type(3):hover ~ #underbar{
+
+    background: rgba(5, 243, 243, 0.5);
+    box-shadow: 0 0 10px rgba(70,250,250,1);
+  }
+
 
 .fa-github,
 .fa-envelope,
