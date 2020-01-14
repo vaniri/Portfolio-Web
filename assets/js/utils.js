@@ -1,9 +1,7 @@
 //Greating
 
 window.onload = () => {
-  showArray(dayPart(new Date().getHours()));
-  $("#start-screen").append('<hr id="animated"></hr>');
-  setTimeout(afterStart, 2000);
+  showArray(getDay() || dayPart(new Date().getHours()));
   $("#SWG").append('<iframe class="project-video" width="560" height="315" src="https://www.youtube.com/embed/QMWxJFC5xCo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
   $("#wise-crack").append(' <iframe class="project-video" width="560" height="315" src="https://www.youtube.com/embed/fG0JwZmYhlc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
   $("#JS-quiz").append('<iframe class="project-video" width="560" height="315" src="https://www.youtube.com/embed/bR77LCnj_70" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
@@ -22,8 +20,14 @@ function dayPart(hours) {
   }
 }
 
-let showArray = dayPart => {
-  showDayPart(dayPart.split(""), 0);
+function getDay() {
+  var d = new Date();
+  if (d.getDay() === 5) { return "It's Friday! Have a good weekend!";};
+  return null;
+}
+
+let showArray = string => {
+  showDayPart(string.split(""), 0);
 };
 
 let showDayPart = (array, idx) => {
@@ -32,6 +36,8 @@ let showDayPart = (array, idx) => {
     setTimeout(() => {
       showDayPart(array, ++idx);
     }, 150);
+  } else {
+    setTimeout(afterStart, 1000);
   }
 };
 
@@ -40,9 +46,7 @@ let afterStart = () => {
   $("#main-container").show();
 };
 
-
 //scroll nav-bar links
-
 $(".scrollable-link").on("click", function () {
   let anchor = $(this);
   $("html, body")
@@ -59,7 +63,6 @@ $(".scrollable-link").on("click", function () {
 //animated underline
 $(".nav-item").mouseover(event => {
 let { offsetWidth, offsetLeft } = event.target;
-$(".nav-item:not(:first-child):before").css('content', 'none');
 $("#underbar").css('width', offsetWidth + "px");
 $("#underbar").css('left', offsetLeft + "px");
 });
