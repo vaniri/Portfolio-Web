@@ -2,6 +2,8 @@
 
 window.onload = () => {
   showArray(getDay() || dayPart(new Date().getHours()));
+  
+  //$("#start-screen").append('<div class="container"><div class="scroller"><div class="inner"><span>Im Adam Blum.</span></div></div></div>');
   $("#SWG").append('<iframe class="project-video" width="560" height="315" src="https://www.youtube.com/embed/QMWxJFC5xCo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
   $("#wise-crack").append(' <iframe class="project-video" width="560" height="315" src="https://www.youtube.com/embed/fG0JwZmYhlc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
   $("#JS-quiz").append('<iframe class="project-video" width="560" height="315" src="https://www.youtube.com/embed/bR77LCnj_70" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
@@ -22,7 +24,7 @@ function dayPart(hours) {
 
 function getDay() {
   var d = new Date();
-  if (d.getDay() === 5) { return "It's Friday! Have a good weekend!";};
+  if (d.getDay() === 5) { return "It's Friday!\nHave a good weekend!";};
   return null;
 }
 
@@ -32,11 +34,13 @@ let showArray = string => {
 
 let showDayPart = (array, idx) => {
   if (idx < array.length) {
-    $("#greeting").append(array[idx]);
+    const ch = array[idx];
+    $("#greeting").append(ch === '\n' ? "<br/>" : ch);
     setTimeout(() => {
       showDayPart(array, ++idx);
-    }, 150);
+    }, 100);
   } else {
+    $("#start-screen").addClass("greeting-animation");
     setTimeout(afterStart, 1000);
   }
 };
@@ -66,3 +70,4 @@ let { offsetWidth, offsetLeft } = event.target;
 $("#underbar").css('width', offsetWidth + "px");
 $("#underbar").css('left', offsetLeft + "px");
 });
+

@@ -23,6 +23,39 @@ body {
   color: #ed4d45;
 }
 
+.greeting-animation {
+  opacity: 0;
+  animation-name: fadeOut;
+  animation-duration: 1s;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.main-container-animation {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 hr {
   border: 0.05vw solid #ed4d45;
 }
@@ -680,3 +713,5 @@ footer {
     color: white;
   }
 }
+
+
