@@ -39,12 +39,10 @@ body {
   }
 }
 
-
 .main-container-animation {
   animation-name: fadeIn;
-  animation-duration: 1s;
+  animation-duration: 2s;
 }
-
 
 @keyframes fadeIn {
   0% {
@@ -239,7 +237,11 @@ h4 {
 
 #my-info {
   padding: 3vw;
+  width: 1%;
+  max-width: 90%;
   border-left: solid 0.05vw #fbefdf;
+  animation: increase 3s;
+  animation-fill-mode: forwards;
 }
 
 .main-info h2,
@@ -334,12 +336,19 @@ p {
   cursor: pointer;
 }
 
-#tools-img-container {
+#icon-container {
   text-align: center;
 }
 
-#tools-img {
-  width: 80%;
+.tools-icon {
+  width: 100px;
+  height: 100px;
+  opacity: 0;
+}
+
+.tools-animate {
+  opacity: 1;
+  transition: 0.4s;
 }
 
 footer {
@@ -580,10 +589,6 @@ footer {
     font-size: 1.2em;
   }
 
-  #tools-img {
-    width: 100%;
-  }
-
   .project-video {
     width: 100%;
   }
@@ -700,10 +705,6 @@ footer {
     font-size: 1.2em;
   }
 
-  #tools-img {
-    width: 100%;
-  }
-
   .project-video {
     width: 100%;
   }
@@ -713,5 +714,3 @@ footer {
     color: white;
   }
 }
-
-

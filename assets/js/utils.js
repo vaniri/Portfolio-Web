@@ -2,12 +2,24 @@
 
 window.onload = () => {
   showArray(getDay() || dayPart(new Date().getHours()));
-  
-  //$("#start-screen").append('<div class="container"><div class="scroller"><div class="inner"><span>Im Adam Blum.</span></div></div></div>');
+  $("#about-text").append('<hr id="animated-hr"></hr>');
   $("#SWG").append('<iframe class="project-video" width="560" height="315" src="https://www.youtube.com/embed/QMWxJFC5xCo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
   $("#wise-crack").append(' <iframe class="project-video" width="560" height="315" src="https://www.youtube.com/embed/fG0JwZmYhlc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
   $("#JS-quiz").append('<iframe class="project-video" width="560" height="315" src="https://www.youtube.com/embed/bR77LCnj_70" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
-  
+
+  //tool-box animation
+  function callback(entries, observer) {
+    if (entries[0].isIntersecting) {
+      const icons = $(".tools-icon");
+      for (let i = 0; i < icons.length; ++i) {
+        setTimeout(() => $(icons[i]).addClass("tools-animate"), i * 200);
+      }
+    }
+  };
+
+  let observer = new IntersectionObserver(callback, { threshold: 1.0 });
+  let target = document.querySelector('#icon-container');
+  observer.observe(target);
 };
 
 function dayPart(hours) {
@@ -24,7 +36,7 @@ function dayPart(hours) {
 
 function getDay() {
   var d = new Date();
-  if (d.getDay() === 5) { return "It's Friday!\nHave a good weekend!";};
+  if (d.getDay() === 5) { return "It's Friday!\nHave a good weekend!"; };
   return null;
 }
 
@@ -66,8 +78,7 @@ $(".scrollable-link").on("click", function () {
 
 //animated underline
 $(".nav-item").mouseover(event => {
-let { offsetWidth, offsetLeft } = event.target;
-$("#underbar").css('width', offsetWidth + "px");
-$("#underbar").css('left', offsetLeft + "px");
+  let { offsetWidth, offsetLeft } = event.target;
+  $("#underbar").css('width', offsetWidth + "px");
+  $("#underbar").css('left', offsetLeft + "px");
 });
-
