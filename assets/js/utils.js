@@ -1,7 +1,7 @@
 //Greating
 
 window.onload = () => {
-  showArray(getDay() || dayPart(new Date().getHours()));
+  showArray(checkFriday() || dayPart(new Date().getHours()));
   $("#about-text").append('<hr id="animated-hr"></hr>');
   $("#SWG").append('<iframe class="project-video" width="560" height="315" src="https://www.youtube.com/embed/QMWxJFC5xCo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
   $("#wise-crack").append(' <iframe class="project-video" width="560" height="315" src="https://www.youtube.com/embed/fG0JwZmYhlc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
@@ -34,8 +34,8 @@ function dayPart(hours) {
   }
 }
 
-function getDay() {
-  var d = new Date();
+function checkFriday() {
+  let d = new Date();
   if (d.getDay() === 5) { return "It's Friday!\nHave a good weekend!"; };
   return null;
 }
