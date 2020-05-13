@@ -33,7 +33,6 @@ body {
   0% {
     opacity: 1;
   }
-
   100% {
     opacity: 0;
   }
@@ -48,7 +47,6 @@ body {
   0% {
     opacity: 0;
   }
-
   100% {
     opacity: 1;
   }
@@ -73,6 +71,7 @@ hr {
   animation: increase 3s;
   animation-fill-mode: forwards;
 }
+
 @keyframes increase {
   100% {
     width: 100%;
@@ -141,6 +140,7 @@ li {
 }
 
 /* nav bar underline animation */
+
 #underbar {
   margin: auto;
   width: 0;
@@ -160,38 +160,37 @@ li:hover {
   cursor: pointer;
 }
 
-li:nth-of-type(1):hover ~ #underbar {
+li:nth-of-type(1):hover~#underbar {
   background: rgb(31, 12, 204);
   box-shadow: 0 0 10px rgb(31, 12, 204);
 }
 
-li:nth-of-type(2):hover ~ #underbar {
+li:nth-of-type(2):hover~#underbar {
   background: rgb(124, 9, 231);
   box-shadow: 0 0 10px rgb(124, 9, 231);
 }
 
-li:nth-of-type(3):hover ~ #underbar {
+li:nth-of-type(3):hover~#underbar {
   background: rgba(5, 243, 243, 0.5);
   box-shadow: 0 0 10px rgba(70, 250, 250, 1);
 }
+li:nth-of-type(4):hover~#underbar {
+  background: rgb(50, 211, 10);
+  box-shadow: 0 0 10px rgb(50, 211, 10);
+}
 
-.fa-github,
-.fa-envelope,
-.fa-linkedin {
+.fa-github, .fa-envelope, .fa-linkedin {
   color: #ed4d45;
   -webkit-font-smoothing: none;
   margin: auto;
 }
 
-.social-icon,
-.fa,
-.fa-angle-up {
+.social-icon, .fa, .fa-angle-up {
   color: #ed4d45;
   font-size: 1.5em;
 }
 
-.fa:hover,
-.fa:focus {
+.fa:hover, .fa:focus {
   box-shadow: 0px 6.1px 10.1px -2px #ed4d45;
 }
 
@@ -231,6 +230,7 @@ h4 {
   display: block;
   margin-bottom: 0.8em;
 }
+
 #links-table {
   text-align: center;
 }
@@ -244,9 +244,7 @@ h4 {
   animation-fill-mode: forwards;
 }
 
-.main-info h2,
-.portfolio-box h2,
-#tools-container h2 {
+.main-info h2, .portfolio-box h2, #tools-container h2 {
   font-weight: 200;
   font-size: 25px;
   color: #ed4d45;
@@ -257,9 +255,7 @@ a {
   text-decoration: none;
 }
 
-.main-info,
-.portfolio-box,
-#tools-container {
+.main-info, .portfolio-box, #tools-container {
   background-color: #272727ff;
   margin: auto;
   margin-top: 2em;
@@ -277,18 +273,17 @@ p {
 
 .portfolio-links-container {
   text-align: center;
-  margin-top: 1.5em;
+  margin: 3em 0;
 }
 
 .portfolio-link {
   color: #ed4d45;
   margin: 1em auto;
   font-size: 20px;
-  color: #f3f2f2;
+  color: lightcoral;
 }
 
-.portfolio-pic:hover ~ .portfolio-link,
-.portfolio-link:hover {
+.portfolio-pic:hover~.portfolio-link, .portfolio-link:hover {
   color: #ed4d45;
   cursor: pointer;
 }
@@ -296,6 +291,7 @@ p {
 .portfolio-link {
   transform: translate(0px, 5px);
 }
+
 .portfolio-link {
   transition: all 0.3s ease-out;
   transform: translate(0px, 5px);
@@ -306,9 +302,7 @@ p {
   text-align: center;
 }
 
-.portfolio-img,
-.portfolio-img-second,
-.project-video {
+.portfolio-img, .portfolio-img-second, .project-video {
   width: 100%;
   height: 270px;
 }
@@ -328,21 +322,28 @@ p {
   width: 100%;
 }
 
-.video-container:hover,
-.underline-effect:hover ~ .focus-border {
+.underline-effect:hover~.focus-border {
   width: 100%;
   transition: 0.4s;
   left: 0;
   cursor: pointer;
 }
 
-#icon-container {
+#tools-icons-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   text-align: center;
 }
 
 .tools-icon {
+  width: 60px;
+  height: 60px;
+  opacity: 0;
+}
+
+.tools-icon-120 {
   width: 100px;
-  height: 100px;
+  height: 70px;
   opacity: 0;
 }
 
@@ -364,12 +365,12 @@ footer {
 }
 
 /* border decoration for paragrafs */
+
 .bot-right {
   position: relative;
 }
 
-.bot-right:before,
-.bot-right:after {
+.bot-right:before, .bot-right:after {
   background-image: url("https://4.bp.blogspot.com/-lwGB1nVEioc/W7MH3fS6WJI/AAAAAAAAJ4s/HXjR-OOhoskpy02Hwe1ihSD23osfceERgCLcBGAs/s1600/Code%2BWolf.jpg");
   content: "";
   position: absolute;
@@ -380,13 +381,7 @@ footer {
 .bot-right:before {
   top: -3px;
   width: 1px;
-  background-image: -webkit-gradient(
-    linear,
-    0 80%,
-    0 0,
-    from(#ed4d45),
-    to(#232323)
-  );
+  background-image: -webkit-gradient( linear, 0 80%, 0 0, from(#ed4d45), to(#232323));
   background-image: -webkit-linear-gradient(transparent, #ed4d45);
   background-image: -moz-linear-gradient(transparent, #ed4d45);
   background-image: -o-linear-gradient(transparent, #ed4d45);
@@ -395,13 +390,7 @@ footer {
 .bot-right:after {
   left: -3px;
   height: 1px;
-  background-image: -webkit-gradient(
-    linear,
-    0 0,
-    100% 0,
-    from(#ed4d45),
-    to(#232323)
-  );
+  background-image: -webkit-gradient( linear, 0 0, 100% 0, from(#ed4d45), to(#232323));
   background-image: -webkit-linear-gradient(right, #ed4d45, transparent);
   background-image: -moz-linear-gradient(right, #ed4d45, transparent);
   background-image: -o-linear-gradient(right, #ed4d45, transparent);
@@ -411,8 +400,7 @@ footer {
   position: relative;
 }
 
-.bot-left:before,
-.bot-left:after {
+.bot-left:before, .bot-left:after {
   background-image: url("https://4.bp.blogspot.com/-lwGB1nVEioc/W7MH3fS6WJI/AAAAAAAAJ4s/HXjR-OOhoskpy02Hwe1ihSD23osfceERgCLcBGAs/s1600/Code%2BWolf.jpg");
   content: "";
   position: absolute;
@@ -423,13 +411,7 @@ footer {
 .bot-left:before {
   top: -3px;
   width: 1px;
-  background-image: -webkit-gradient(
-    linear,
-    0 80%,
-    0 0,
-    from(#ed4d45),
-    to(#232323)
-  );
+  background-image: -webkit-gradient( linear, 0 80%, 0 0, from(#ed4d45), to(#232323));
   background-image: -webkit-linear-gradient(transparent, #ed4d45);
   background-image: -moz-linear-gradient(transparent, #ed4d45);
   background-image: -o-linear-gradient(transparent, #ed4d45);
@@ -438,19 +420,14 @@ footer {
 .bot-left:after {
   right: -3px;
   height: 1px;
-  background-image: -webkit-gradient(
-    linear,
-    0 0,
-    100% 0,
-    from(#ed4d45),
-    to(#232323)
-  );
+  background-image: -webkit-gradient( linear, 0 0, 100% 0, from(#ed4d45), to(#232323));
   background-image: -webkit-linear-gradient(left, #ed4d45, transparent);
   background-image: -moz-linear-gradient(left, #ed4d45, transparent);
   background-image: -o-linear-gradient(left, #ed4d45, transparent);
 }
 
 /* fa icon animation */
+
 .animated:hover {
   cursor: pointer;
   animation-duration: 1.5s;
@@ -458,9 +435,9 @@ footer {
   animation-timing-function: ease;
   animation-iteration-count: infinite;
 }
+
 @keyframes bounce {
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0);
   }
   50% {
@@ -507,7 +484,6 @@ footer {
   #greeting {
     font-size: 1em;
   }
-
   #start-screen {
     margin: auto;
     margin-top: 30vh;
@@ -516,29 +492,23 @@ footer {
     font-size: 3em;
     color: #ed4d45;
   }
-
   #p-top {
     visibility: visible;
     padding: 0.01em;
   }
-
   #p-bottom {
     margin: 0;
     padding: 0.01em;
   }
-
-  .main-info,
-  .portfolio-box,
-  #tools-container {
+  .main-info, .portfolio-box, #tools-container {
     background-color: #272727ff;
     text-align: center;
-    width: 600px;
+    width: 800px;
     height: 100%;
     border: none;
     box-sizing: border-box;
     padding: 1.2em;
   }
-
   #about-me {
     margin: auto;
     display: grid;
@@ -546,61 +516,47 @@ footer {
     grid-template-columns: auto;
     margin-top: 1.5vw;
   }
-
   ul {
     margin: auto;
   }
-
   #my-info {
     padding: 0;
   }
-
   #project-container {
     margin: auto;
     display: inline-grid;
     grid-template-columns: auto;
   }
-
   #nav {
     margin-bottom: 0.5em;
     background-color: black;
     border-bottom: 0.05em solid white;
   }
-
-  #nav,
-  footer {
+  #nav, footer {
     width: 100%;
   }
-
   #nav-bar {
     padding: 0.05em;
     text-align: center;
   }
-
   .nav-item:not(:first-child):before {
     border-right: 1px solid #ed4d45;
   }
-
   .article-links {
     text-align: justify;
   }
-
   .scrollable-link {
     font-size: 1.2em;
   }
-
   .project-video {
     width: 100%;
   }
-
   #photo-container {
     padding: 0;
   }
-
   #my-info {
     border: none;
   }
-
   footer {
     background-color: #232323;
     color: white;
@@ -611,7 +567,6 @@ footer {
   #greeting {
     font-size: 1em;
   }
-
   #start-screen {
     margin: auto;
     margin-top: 30vh;
@@ -620,20 +575,15 @@ footer {
     font-size: 3em;
     color: #ed4d45;
   }
-
   #p-top {
     visibility: visible;
     padding: 0.01em;
   }
-
   #p-bottom {
     margin: 0;
     padding: 0.01em;
   }
-
-  .main-info,
-  .portfolio-box,
-  #tools-container {
+  .main-info, .portfolio-box, #tools-container {
     background-color: #272727ff;
     text-align: center;
     width: 100%;
@@ -642,7 +592,6 @@ footer {
     box-sizing: border-box;
     padding: 1.2em;
   }
-
   #about-me {
     margin: auto;
     display: grid;
@@ -650,67 +599,77 @@ footer {
     grid-template-columns: auto;
     margin-top: 1.5vw;
   }
-
   #links-table {
     margin-top: 0.5em;
   }
-
   ul {
     margin: auto;
   }
-
   #my-info {
     padding: 0;
   }
   #photo-container {
     padding: 0;
   }
-
   #project-container {
     margin: auto;
     display: inline-grid;
     grid-template-columns: auto;
   }
-
   #nav {
     margin-bottom: 0.5em;
     background-color: black;
     border-bottom: 0.05em solid white;
   }
-
   #nav-bar {
     padding: 0.05em;
     text-align: center;
   }
-
-  #nav,
-  footer {
+  #nav, footer {
     width: 100%;
   }
-
   #nav a {
     margin: auto;
     font-size: 15px;
   }
-
   .nav-item:not(:first-child):before {
     border-right: 1px solid #ed4d45;
   }
-
   .article-links {
     text-align: justify;
   }
-
   .scrollable-link {
     font-size: 1.2em;
   }
-
   .project-video {
     width: 100%;
   }
-
   footer {
     background-color: #232323;
     color: white;
   }
+}
+
+#fitmeup,
+#rss,
+#wavme {
+  display: grid;
+  grid-template-columns: auto;
+  text-align: justify;
+}
+
+.project-img-container {
+  display: grid;
+  grid-template-columns: 48% 48%;
+  grid-gap: 0.5em;
+}
+
+.article-links-projects {
+  display: grid;
+  text-align: end;
+  margin-bottom: 2em;
+}
+
+.project-intro {
+  text-align: justify;
 }
