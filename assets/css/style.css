@@ -297,6 +297,11 @@ p {
   transform: translate(0px, 5px);
 }
 
+.portfolio-link:hover {
+  color: #ed4d45;
+  transition: 0.4s;
+}
+
 .title {
   margin: 2em auto;
   text-align: center;
@@ -322,10 +327,15 @@ p {
   width: 100%;
 }
 
+.main-info:hover,
+.portfolio-box:hover {
+  filter: brightness(120%);
+}
+
 .underline-effect:hover~.focus-border {
   width: 100%;
   transition: 0.4s;
-  left: 0;
+  border-color: green;
   cursor: pointer;
 }
 
@@ -673,3 +683,4 @@ footer {
 .project-intro {
   text-align: justify;
 }
+
