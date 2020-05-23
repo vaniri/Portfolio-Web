@@ -202,9 +202,11 @@ li:nth-of-type(4):hover~#underbar {
   display: grid;
   grid-gap: 1.5%;
   grid-auto-columns: 100%;
-  grid-template-columns: 49.25% 49.25%;
+  grid-template-columns: 40% 60%;
   margin: 0 auto;
   margin-top: 1.5vw;
+  word-break: break-all;
+  font-weight: 300;
 }
 
 h4 {
@@ -236,12 +238,15 @@ h4 {
 }
 
 #my-info {
-  padding: 3vw;
+  padding: 2vw;
   width: 1%;
-  max-width: 90%;
+  max-width: 100%;
   border-left: solid 0.05vw #fbefdf;
   animation: increase 3s;
   animation-fill-mode: forwards;
+  box-sizing: border-box;
+  word-break: break-word;
+  letter-spacing: initial;
 }
 
 .main-info h2, .portfolio-box h2, #tools-container h2 {
@@ -260,8 +265,8 @@ a {
   margin: auto;
   margin-top: 2em;
   padding: 2em;
-  text-align: justify;
-  width: 960px;
+  text-align: center;
+  width: 65%;
   height: 100%;
   border: none;
   box-sizing: border-box;
