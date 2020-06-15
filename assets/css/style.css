@@ -92,6 +92,7 @@ hr {
   margin: auto;
   background-image: linear-gradient(to right, #232323, #47464680, #232323);
   margin: 2.5em auto;
+  text-align: center;
 }
 
 ul {
@@ -100,8 +101,7 @@ ul {
 
 #nav-bar {
   margin: auto;
-  padding: 0.5vw 0;
-  width: fit-content;
+  padding: 1em 0;
 }
 
 li {
@@ -145,7 +145,6 @@ li {
 /* nav bar underline animation */
 
 #underbar {
-  margin: auto;
   width: 0;
   height: 2px;
   background: rgba(100, 100, 200, 0);
@@ -223,7 +222,7 @@ h1 {
 
 h2 {
   margin: 2.5em auto;
-  padding: 0.3em;
+  padding: 0.6em;
   text-align: center;
   color: #ff4747;
 }
