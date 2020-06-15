@@ -53,7 +53,7 @@ body {
 }
 
 hr {
-  border: 0.05vw solid #ed4d45;
+  border: solid 0.01em #8e2525;
 }
 
 .social-icon #greeting {
@@ -63,8 +63,8 @@ hr {
 }
 
 #animated-hr {
-  width: 1%;
-  border: 1px solid #ed4d45;
+  width: 0.5%;
+  border: solid 0.01em #8e2525;
   -webkit-animation: increase 5s;
   -moz-animation: increase 3s;
   -o-animation: increase 3s;
@@ -87,7 +87,7 @@ hr {
   display: none;
 }
 
-#nav {
+.nav {
   width: 100%;
   margin: auto;
   background-image: linear-gradient(to right, #232323, #47464680, #232323);
@@ -114,7 +114,7 @@ li {
   grid-template-columns: 95% 5%;
 }
 
-#nav a {
+.nav a {
   color: #f3f2f2;
   border: none;
   margin: auto;
@@ -209,14 +209,16 @@ li:nth-of-type(4):hover~#underbar {
 }
 
 #about-text {
-  margin-bottom: 2.5vw;
+
 }
 
-h4 {
-  margin: 0;
-  margin: 0;
+h1 {
+  padding: 0.3em;
+  text-align: center;
   color: #ff4747;
-  font-size: 1.5em;
+  font-size: 1.7em;
+  font-weight: 200;
+  letter-spacing: 0.03em;
 }
 
 h2 {
@@ -225,6 +227,15 @@ h2 {
   text-align: center;
   color: #ff4747;
 }
+
+
+h4 {
+  margin: 0;
+  margin: 0;
+  color: #ff4747;
+  font-size: 1.5em;
+}
+
 
 #bio-photo {
   box-shadow: 0px 0px 0px 2px #403f3f;
@@ -264,8 +275,7 @@ a {
 
 .main-info, .portfolio-box, #tools-container {
   background-color: #272727ff;
-  margin: auto;
-  margin-top: 2em;
+  margin: 4em auto;
   padding: 2em;
   text-align: center;
   width: 65%;
@@ -287,13 +297,13 @@ p {
   color: #ed4d45;
   margin: 1em auto;
   font-size: 20px;
-  color: #ed4d45;
   padding: 0.2em;
 }
 
 .portfolio-pic:hover~.portfolio-link, .portfolio-link:hover {
-  color: #ed4d45;
-  border: none;
+  transition: 0.4s;
+  cursor: pointer;
+  color: #a92e2e;
 }
 
 .portfolio-link {
@@ -303,11 +313,6 @@ p {
 .portfolio-link {
   transition: all 0.3s ease-out;
   transform: translate(0px, 5px);
-}
-
-.portfolio-link:hover {
-  color: #ed4d45;
-  transition: 0.4s;
 }
 
 .title {
@@ -688,3 +693,9 @@ footer {
   font-weight: 200;
 }
 
+.tools-hr {
+  background: linear-gradient(to right, #232323, #ed4d45, #232323);
+  border: 0;
+  height: 0.5px;
+
+}
